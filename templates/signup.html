@@ -129,7 +129,8 @@
     </style>
 </head>
 <body>
-<form class="container" action="/signup" method="post">
+<form class="container" action="" method="post">
+    {% csrf_token %}
     <h3>Sign Up Here</h3>
     <label for="username"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="username" required>
@@ -145,7 +146,7 @@
 </br>
 <button type="submit">SignUp</button>
 </br>
-<a herf="/login"> Already have an Account?</a>
+<a href="/login">I have an account</a>
 </form>
 </body>
 </html>
