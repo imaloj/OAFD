@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Image Upload</title>
         <style>
             body {
@@ -47,8 +49,12 @@
             <form action="{%url 'upload'%}" method="post" enctype="multipart/form-data">
                 {% csrf_token%}
                 <input type="file" name="image" required>
+
                 <input type="submit" value="Upload">
+                
             </form>
+            <bottom onclick="window.location.herf='{%url 'capture-frames'%}">
+                Capture</bottom>
         </div>
     </body>
 </html>

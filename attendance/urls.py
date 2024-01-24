@@ -25,4 +25,5 @@ urlpatterns = [
     path('login/',views.LoginPage,name='login'),
     path('home/',views.HomePage,name='home'),
     path('upload/',views.UploadImage, name='upload'),
+    path('capture-frames/',views.Captureframes,name='capture-frames'),
 ]
