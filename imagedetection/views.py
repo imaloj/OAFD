@@ -17,7 +17,7 @@ from io import BytesIO
 # query = """CREATE TABLE IF NOT EXISTS images (id INT AUTO_INCREMENT PRIMARY KEY, image LONGBLOB)"""
 # cursor.execute(query)
 
-face_cascade = cv2.CascadeClassifier("c:/Users/Dell/Desktop/ProjectOAFD/env/Lib/site-packages/cv2/data/haarcascade_frontalface_default.xml")
+face_cascade = cv2.CascadeClassifier(self.Dir + '/haarcascade_frontalface_default.xml' )
 video_cap=cv2.VideoCapture(1)
 if not video_cap.isOpened():
     print("Error:Could not open Camera.")
@@ -49,6 +49,7 @@ def Captureframes(frame):
             query = """INSERT INTO images (image) VALUES (%s)"""
             cursor.execute(query, (img_str,))
     video_cap.release()
+    cv2.destroyAllWindows()
 
 def SignupPage(request):
     return render(request,'signup.html')
