@@ -6,11 +6,17 @@
     <title>Home Page</title>
 </head>
 <body>
-  {% import 'attendance/nav.html' %}
 <h1>Welcome to the Home Page</h1>
+<div class="container" id="main">
+  <h1 align="center">Attendance System </h1><br>
+  <h3 align="center">Proceed to working</h3><br>
 
-<p><a href="/login">Logout</a></p>
-</br>
-<p><a href="/upload">Upload</a></p>
+
+  <p align="center"><a href="{% url 'login' %}"><button>Teacher Login</button></a></p>
+
+  <h4 align="center">or</h4>
+
+  <p align="center"><a href="{% url 'register' %}"><button name="register">Sign Up</button></a></p>
+</div>
 </body>
 </html>

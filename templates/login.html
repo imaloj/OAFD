@@ -52,21 +52,36 @@
         }
         ::placeholder{
             color: #e5e5e5;
+        }input[type=text]
+        {
+            margin-top:50px;
+            width:100;
+            bacground-color:rgba(255,255,255,255)
+            pading;15px 0;
+            font-size:13px;
+            font-weight:600;
+            border_radius:12px;
+
         }
-        button{
+        input[type=submit]
+        {
+          
             margin-top: 50px;
-            width: 100%;
-            background-color:rgba(0,0,0,255);
+            background-color:rgba(36, 97, 120,255);
             color: rgba(255,255,255,255);
             padding: 15px 0;
             font-size: 18px;
             font-weight: 600;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
+            width:200px;
+            
+            
+            
         }
 
-        button[type=submit]:hover {
-            background-color: #1f4e79;
+        input[type=submit]:hover {
+            background-color: #000608;
         }
         form h3{
             font-size: 32px;
@@ -128,15 +143,10 @@
     <form  method="post">
         <h3>Login Here</h3>
         {%csrf_token%} 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Enter Username" id="username" name="username">
-    </br>
-        <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="password">
-
-        <button type="submit">Log In</button>
-</br>
-        <a href="/">Create an Account</a>
+        <div class="container" id="login">
+            <input type="text" class="form-control" name="tecid" placeholder="Teacher Id" required><br>
+            <input type="submit" value="Submit" >
+        </div>
     </form>
 </body>
 </html>
